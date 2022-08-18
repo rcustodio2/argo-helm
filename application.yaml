@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-helm-values
+  namespace: default
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/rcustodio2/argo-helm
+    targetRevision: HEAD
+    # path: .
+    # helm:
+    #   valueFiles:
+    #     - values-helm.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
