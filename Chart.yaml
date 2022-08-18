@@ -5,5 +5,5 @@ type: application
 appVersion: "1.23.0"
 dependencies:
   - name: nginx
-    repository: https://charts.bitnami.com/bitnami
+    repository: "https://charts.bitnami.com/bitnami"
     version: "13.1.8"
