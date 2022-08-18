@@ -2,8 +2,9 @@ apiVersion: v2
 name: nginx
 description: A Helm chart for Kubernetes
 type: application
-appVersion: "1.23.0"
+version: 13.1.8
+appVersion: "1.23.1"
 dependencies:
   - name: nginx
-    repository: "https://charts.bitnami.com/bitnami"
-    version: "13.1.8"
+    version: 13.1.8
+    repository: https://charts.bitnami.com/bitnami
