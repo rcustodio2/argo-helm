@@ -1,17 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-helm-values
-  namespace: default
+  name: teste-nginx
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/rcustodio2/argo-helm
-    targetRevision: HEAD
-    # path: .
-    # helm:
-    #   valueFiles:
-    #     - values-helm.yaml
   destination:
-    server: "https://kubernetes.default.svc"
+    name: ''
     namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ''
+    repoURL: 'https://charts.bitnami.com/bitnami'
+    targetRevision: 13.1.5
+    chart: nginx
+    helm:
+      valueFiles:
+        - values-helm.yaml
+  project: default
