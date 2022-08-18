@@ -1,0 +1,4 @@
+image:
+  repository: 'pminkows/person-app'
+  tag: 1.3
+  registry: quay.io
