@@ -7,7 +7,8 @@ wordpress:
     enabled: false
   externalDatabase:
     host: localhost
-    user: rodrigo-custodio
+    user: custodio-rodrigo
     password: ""
     database: bitnami_wordpress
     port: 6500
+
