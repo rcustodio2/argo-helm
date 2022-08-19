@@ -10,5 +10,5 @@ wordpress:
     user: custodio-rodrigo
     password: ""
     database: bitnami_wordpress
-    port: 6500
+    port: 6911
 
