@@ -1,7 +1,7 @@
 name: "in-cluster"
 address: "https://kubernetes.default.svc"
 values: |
-  replicaCount: 2
+  replicaCount: 8
   resources:
     limits:
       cpu: 100m
