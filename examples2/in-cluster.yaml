@@ -1,0 +1,8 @@
+name: "rodrigo"
+address: "https://kubernetes.default.svc"
+values: |
+  replicaCount: 5
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi 
