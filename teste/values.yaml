@@ -1,0 +1,14 @@
+mariadb:
+  enabled: false
+
+wordpress:
+  wordpressPassword: foo
+  mariadb:
+    enabled: false
+  externalDatabase:
+    host: localhost
+    user: custodio-rodrigo
+    password: ""
+    database: bitnami_wordpress
+    port: 6911
+
