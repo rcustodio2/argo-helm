@@ -17,10 +17,10 @@ spec:
       project: default
       source:
         helm:
-          # valueFiles:
-          # - values.yaml
-          values: |-
-            {{values}}
+           valueFiles:
+           - values.yaml
+             #values: |-
+             #{{values}}
         repoURL: https://github.com/bitnami/charts.git
         targetRevision: HEAD
         path: "bitnami/nginx"
