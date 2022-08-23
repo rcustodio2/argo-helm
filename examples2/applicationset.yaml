@@ -49,7 +49,7 @@ spec:
       source:
         helm:
           valueFiles:
-          - https://github.com/rcustodio2/argo-helm/blob/main/examples2/values.yaml
+          - values.yaml
           # values: |-
           #   {{values}}
         repoURL: https://github.com/bitnami/charts.git
