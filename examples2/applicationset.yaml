@@ -40,7 +40,7 @@ spec:
       repoURL: 'https://github.com/rcustodio2/argo-helm.git'
       revision: HEAD
       files:
-      - path: "examples/**.yaml"  
+      - path: "examples2/**.yaml"  
   template:
     metadata:
       name: '{{name}}-example'
