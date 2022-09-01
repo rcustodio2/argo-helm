@@ -29,10 +29,44 @@
 #         namespace: default 
 ---
 
+#apiVersion: argoproj.io/v1alpha1
+#kind: ApplicationSet
+#metadata:
+#  name: rodrigo-teste
+#  namespace: argocd
+#spec:
+#  generators:
+#  - git:
+#      repoURL: 'https://github.com/rcustodio2/argo-helm.git'
+#      revision: HEAD
+#      files:
+#      - path: "examples2/**.yaml"  
+#  template:
+#    metadata:
+#      name: '{{name}}-example'
+#    spec:
+#      project: default
+#      source:
+#        helm:
+#          valueFiles:
+#          - values.yaml
+#          # values: |-
+#          #   {{values}}
+#        repoURL: https://github.com/bitnami/charts.git
+#        targetRevision: HEAD
+#        path: "bitnami/nginx"
+#      destination:
+#        server: '{{address}}'
+#        namespace: default 
+#
+#
+#
+#
+#
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: rodrigo-teste
+  name: chart1
   namespace: argocd
 spec:
   generators:
@@ -43,18 +77,19 @@ spec:
       - path: "examples2/**.yaml"  
   template:
     metadata:
-      name: '{{name}}-example'
+      name: 'chart2'
     spec:
       project: default
       source:
         helm:
-          valueFiles:
-          - values.yaml
-          # values: |-
-          #   {{values}}
-        repoURL: https://github.com/bitnami/charts.git
-        targetRevision: HEAD
-        path: "bitnami/nginx"
+          # valueFiles:
+          # - values.yaml
+          values: |-
+            {{values}}
+        repoURL: https://chartmuseum.meliuz.com.br
+        chart: nginx
+        targetRevision: 'HEAD'
       destination:
         server: '{{address}}'
         namespace: default 
+
