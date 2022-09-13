@@ -1,0 +1,4 @@
+name: "rodrigonginx"
+address: "https://kubernetes.default.svc"
+values: |
+  replicaCount: 2
